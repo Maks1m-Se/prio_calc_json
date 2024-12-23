@@ -7,7 +7,7 @@ import logging
 
 logging.basicConfig(level=logging.DEBUG)
 
-print('Test ############')
+print('Test ############ Script working')
 
 # Set the working directory to the directory of the script
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
@@ -28,6 +28,14 @@ reset_task_scores = False
 
 
 #### Helper functions ####
+
+# Init file for data
+def initialize_data_file():
+    """Ensures the data.json file starts empty."""
+    with open(JSON_FILE, 'w') as file:
+        json.dump({"tasks": []}, file, indent=4)
+    print("data.json file initialized to empty structure.")  # Debugging
+
 
 # READ from JSON
 def read_tasks():
@@ -252,4 +260,5 @@ def show_results():
 
 #### Main ####
 if __name__ == '__main__':
+    initialize_data_file()  # Clear the data.json file on app start
     app.run(debug=True, port=5000)

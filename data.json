@@ -2,41 +2,28 @@
     "tasks": [
         {
             "id": 1,
-            "name": "Homepage",
+            "name": "Task A",
             "done": false,
-            "importance": 6,
-            "urgency": 2,
-            "effort": 3,
+            "importance": 0,
+            "urgency": 0,
+            "effort": 0,
             "rated": {
-                "importance": true,
-                "urgency": true,
-                "effort": true
+                "importance": false,
+                "urgency": false,
+                "effort": false
             }
         },
         {
             "id": 2,
-            "name": "Sport",
+            "name": "Task B",
             "done": false,
-            "importance": 9,
-            "urgency": 5,
-            "effort": 4,
+            "importance": 0,
+            "urgency": 0,
+            "effort": 0,
             "rated": {
-                "importance": true,
-                "urgency": true,
-                "effort": true
-            }
-        },
-        {
-            "id": 3,
-            "name": "K\u00fcche aufr\u00e4umen",
-            "done": false,
-            "importance": 6,
-            "urgency": 9,
-            "effort": 3,
-            "rated": {
-                "importance": true,
-                "urgency": true,
-                "effort": true
+                "importance": false,
+                "urgency": false,
+                "effort": false
             }
         }
     ]
