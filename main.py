@@ -105,13 +105,13 @@ def index():
     reset_task_scores = True
     print('reset_task_scores: ', reset_task_scores)
     
-    return render_template('index_WEBAPP.html', title='Main Page',
+    return render_template('index.html', title='Main Page',
                            todo_list=todo_list)
 
 # Return to Main Page
 @app.route('/return_to_index', methods=['POST'])
 def return_to_index():
-    return render_template('index_WEBAPP.html', title='Main Page')
+    return render_template('index.html', title='Main Page')
 
 
 # Add Task
@@ -140,13 +140,6 @@ def delete_task_route(task_id):
     data['tasks'] = [task for task in data['tasks'] if task['id'] != task_id]
     write_tasks(data)
     return redirect(url_for("index"))
-
-# # Sort Tasks
-# @app.route('/sort_tasks/<string:attribute>')
-# def sort_tasks(attribute):
-#     data = read_tasks()
-#     sorted_tasks = sorted(data['tasks'], key=lambda x: x.get(attribute, 0), reverse=True)
-#     return render_template('index_WEBAPP.html', todo_list=sorted_tasks)
 
 
 # Evalute Tasks
