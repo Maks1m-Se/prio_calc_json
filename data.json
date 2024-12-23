@@ -1,0 +1,43 @@
+{
+    "tasks": [
+        {
+            "id": 1,
+            "name": "Homepage",
+            "done": false,
+            "importance": 6,
+            "urgency": 2,
+            "effort": 3,
+            "rated": {
+                "importance": true,
+                "urgency": true,
+                "effort": true
+            }
+        },
+        {
+            "id": 2,
+            "name": "Sport",
+            "done": false,
+            "importance": 9,
+            "urgency": 5,
+            "effort": 4,
+            "rated": {
+                "importance": true,
+                "urgency": true,
+                "effort": true
+            }
+        },
+        {
+            "id": 3,
+            "name": "K\u00fcche aufr\u00e4umen",
+            "done": false,
+            "importance": 6,
+            "urgency": 9,
+            "effort": 3,
+            "rated": {
+                "importance": true,
+                "urgency": true,
+                "effort": true
+            }
+        }
+    ]
+}

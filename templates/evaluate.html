@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="de">
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Evaluation Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_evaluate.css')}}">
+</head>
+
+
+<body>
+    <div class="container" >
+        <h2>Task Evaluation Results</h2>
+
+        <form action="/">
+            <button type="submit">
+                <i class="fas fa-caret-left" style="padding-right: 5px;"></i>
+                Back
+            </button>
+        </form>
+
+        <br>
+        
+        <div class="center">
+            <h4>{{ first_task }}</h4>
+        </div>
+        
+
+
+        <!-- Buttons Rating 0-10 START -->  
+        <h3>Rate Importance</h3>
+        <div class="btn-group">
+            <form action="/update_scores" method="POST">
+                <input type="hidden" name="rated" value="Importance">
+                <button type="submit" name="value" value="0">0</button>
+                <button type="submit" name="value" value="1">1</button>
+                <button type="submit" name="value" value="2">2</button>
+                <button type="submit" name="value" value="3">3</button>
+                <button type="submit" name="value" value="4">4</button>
+                <button type="submit" name="value" value="5">5</button>
+                <button type="submit" name="value" value="6">6</button>
+                <button type="submit" name="value" value="7">7</button>
+                <button type="submit" name="value" value="8">8</button>
+                <button type="submit" name="value" value="9">9</button>
+                <button type="submit" name="value" value="10">10</button>
+            </form>
+        </div>
+
+        <h3>Rate Urgency</h3>
+        <div class="btn-group">
+            <form action="/update_scores" method="POST">
+                <input type="hidden" name="rated" value="Urgency">
+                <button type="submit" name="value" value="0">0</button>
+                <button type="submit" name="value" value="1">1</button>
+                <button type="submit" name="value" value="2">2</button>
+                <button type="submit" name="value" value="3">3</button>
+                <button type="submit" name="value" value="4">4</button>
+                <button type="submit" name="value" value="5">5</button>
+                <button type="submit" name="value" value="6">6</button>
+                <button type="submit" name="value" value="7">7</button>
+                <button type="submit" name="value" value="8">8</button>
+                <button type="submit" name="value" value="9">9</button>
+                <button type="submit" name="value" value="10">10</button>
+            </form>
+        </div>
+
+
+        <h3>Rate Effort</h3>
+        <div class="btn-group">
+            <form action="/update_scores" method="POST">
+                <input type="hidden" name="rated" value="Effort">
+                <button type="submit" name="value" value="0">0</button>
+                <button type="submit" name="value" value="1">1</button>
+                <button type="submit" name="value" value="2">2</button>
+                <button type="submit" name="value" value="3">3</button>
+                <button type="submit" name="value" value="4">4</button>
+                <button type="submit" name="value" value="5">5</button>
+                <button type="submit" name="value" value="6">6</button>
+                <button type="submit" name="value" value="7">7</button>
+                <button type="submit" name="value" value="8">8</button>
+                <button type="submit" name="value" value="9">9</button>
+                <button type="submit" name="value" value="10">10</button>
+            </form>
+        </div>
+
+
+        <!-- Buttons Rating 0-10 END -->
+
+        <br><br>
+
+        <!-- tables START    --> 
+        <h3>Results Table</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Total Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for task in tasks %}
+                <tr>
+                    <td>{{ task.name }}</td>
+                    <td>{{ task.importance + task.urgency - task.effort }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <br>
+
+        <div class="table-row">
+            <div class="table-column">
+                <h3>Importance Table</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Task</th>
+                            <th>Importance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for task in tasks %}
+                        <tr>
+                            <td>{{ task.name }}</td>
+                            <td>{{ task.importance }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-column">
+                <h3>Urgency Table</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Task</th>
+                            <th>Urgency</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for task in tasks %}
+                        <tr>
+                            <td>{{ task.name }}</td>
+                            <td>{{ task.urgency }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-column">
+                <h3>Effort Table</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Task</th>
+                            <th>Effort</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for task in tasks %}
+                        <tr>
+                            <td>{{ task.name }}</td>
+                            <td>{{ task.effort }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- tables END    --> 
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,135 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f8fa;
+  background: linear-gradient(10deg, #4f83d1,  #63D8F2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.25); /* Semi-transparent gray background */
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  border-radius: 20px;
+  }
+  
+.center {
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2e5ab84e;
+  width: fit-content;
+  height: 50px;
+  border: 0px;
+  border-radius: 15px;
+}
+
+.table-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.table-column {
+  flex: 1;
+  margin: 10px;
+}
+
+.btn-group button {
+    background-color: #036873; /* Green background */
+    color: white; /* White text */
+    float: left; /* Float the buttons side by side */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    transition: background-color 0s, color 0s, border-color 0s;
+  }
+  
+  /* Clear floats (clearfix hack) */
+  .btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .btn-group button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+  }
+  
+  /* Add a background color on hover */
+  .btn-group button:hover {
+    background-color: #035959;
+    border: none;
+  }
+
+  form button {
+    background-color: #cacaca00;
+    color: #333;
+    padding: 10px 20px;
+    border: 1px solid #33333300;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  }
+  
+  form button:hover {
+    border: 1px solid #333;
+  }
+
+
+
+
+
+
+  
+  h2 {
+    padding: 20px;
+    text-align: center;
+    color: #333;
+    font-size: 40px;
+    letter-spacing: 3px;
+  }
+
+  h4 {
+    color: #1f3c79;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 30px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  table th {
+    background-color: #cacacadf;
+  }
+  
+  form {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+
+  
+
+
+  

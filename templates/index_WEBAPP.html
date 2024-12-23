@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+
+    <title>Priority To-Do APP</title>
+
+    
+</head>
+<body>
+    <div class="container">
+        <h2>To Do List</h2>
+        <div  class="center">
+        <form action="/evaluate_tasks" method="post">
+            <button type="submit">
+                <i class="fas fa-chart-simple" style="padding-right: 5px;"></i>
+                Evaluate Tasks
+            </button>
+        </form>
+        </div>
+
+
+        <br>
+        <form action="/add_task" method="post">
+            <div>
+                <label>Enter Task</label>
+                <input type="text" name="name" placeholder="Task">
+                <button type="submit">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+
+        </form>
+
+        <br>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th> <!-- Include the Label column header here -->
+                    <th>Tasks</th> 
+                </tr>
+            </thead>
+            <tbody>
+                {%for todo in todo_list%}
+                <tr>
+                    <td>{{todo.id}}</td>
+                    <td>{{todo.name}}</td>
+                    {%if todo.done == False%}
+                    <td>Not Done</td>
+                    {%else%}
+                    <td>Done</td>
+                    {%endif%}
+                    <!--
+                    <td><a href="/update_task/{{todo.task_id}}">Update</a></td>
+                    <td><a href="/delete_task/{{todo.task_id}}">Delete</a></td>
+                    -->
+                    <td>
+                        <form action="/update_task/{{todo.id}}" method="POST" style="display:inline;">
+                            <!-- Debug: Display the generated action URL -->
+                            <button type="submit" class="update-link">Toggle Done</button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="/delete_task/{{todo.id}}" method="POST" style="display:inline;">
+                            <!-- Debug: Display the generated action URL -->
+                            <button type="submit" class="delete-link">Delete</button>
+                        </form>
+                    </td>
+
+                </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

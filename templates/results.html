@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Evaluation Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_evaluate.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Task Evaluation Results</h1>
+
+        <form action="/">
+            <button type="submit">
+                <i class="fas fa-caret-left" style="padding-right: 5px;"></i>
+                Back
+            </button>
+        </form>
+
+        <br><br>
+
+        <!-- Results Table -->
+        <h3>Results Table</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Task</th>
+                    <th>Total Score</th>
+                    <th>Importance</th>
+                    <th>Urgency</th>
+                    <th>Effort</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                {% for task in tasks %}
+                <tr>
+                    <td>{{ task.id }}</td>
+                    <td><b>{{ task.name }}</b></td>
+                    <td><b>{{ task.importance + task.urgency - task.effort }}</b></td>
+                    <td>{{ task.importance }}</td>
+                    <td>{{ task.urgency }}</td>
+                    <td>{{ task.effort }}</td>
+                    
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <h5>Recommendation to perform task in descending order.</h5>
+    </div>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="de">
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Evaluation Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_evaluate.css')}}">
+</head>
+
+
+<body>
+    <div class="container" >
+        <h2>Task Evaluation Results</h2>
+
+        <form action="/">
+            <button type="submit">
+                <i class="fas fa-caret-left" style="padding-right: 5px;"></i>
+                Back
+            </button>
+        </form>
+
+        <br>
+        
+        <div class="center">
+            <h4>{{ first_task }}</h4>
+        </div>
+        
+
+
+        <!-- Buttons Rating 0-10 START -->  
+        <h3>Rate Importance</h3>
+        <div class="btn-group">
+            <form action=/update_scores method="POST">
+                <input type="hidden" name="IT_is_rated" value=1></input>
+                <input type="hidden" name="rated" value="Importance"></input>
+                <button type="submit" name="IT_value" value="0">0</button>
+            </form>
+            <form action=/update_scores method="POST">
+                <input type="hidden" name="IT_is_rated" value=1></input>
+                <input type="hidden" name="rated" value="Importance"></input>
+                <button type="submit" name="IT_value" value="1">1</button>
+            </form>
+            <form action=/update_scores method="POST">
+                <input type="hidden" name="IT_is_rated" value=1></input>
+                <input type="hidden" name="rated" value="Importance"></input>
+                <button type="submit" name="IT_value" value="2">2</button>
+            </form>
+            <form action=/update_scores method="POST">
+                <input type="hidden" name="IT_is_rated" value=1></input>
+                <input type="hidden" name="rated" value="Importance"></input>
+                <button type="submit" name="IT_value" value="3">3</button>
+            </form>
+            <form action=/update_scores method="POST">
+                <input type="hidden" name="IT_is_rated" value=1></input>
+                <input type="hidden" name="rated" value="Importance"></input>
+                <button type="submit" name="IT_value" value="4">4</button>
+            </form>
+            <form action=/update_scores method="POST">
+                <input type="hidden" name="IT_is_rated" value=1></input>
+                <input type="hidden" name="rated" value="Importance"></input>
+                <button type="submit" name="IT_value" value="5">5</button>
+            </form>
+            <form action=/update_scores method="POST">
+                <input type="hidden" name="IT_is_rated" value=1></input>
+                <input type="hidden" name="rated" value="Importance"></input>
+                <button type="submit" name="IT_value" value="6">6</button>
+            </form>
+            <form action=/update_scores method="POST">
+                <input type="hidden" name="IT_is_rated" value=1></input>
+                <input type="hidden" name="rated" value="Importance"></input>
+                <button type="submit" name="IT_value" value="7">7</button>
+            </form>
+            <form action=/update_scores method="POST">
+                <input type="hidden" name="IT_is_rated" value=1></input>
+                <input type="hidden" name="rated" value="Importance"></input>
+                <button type="submit" name="IT_value" value="8">8</button>
+            </form>
+            <form action=/update_scores method="POST">
+                <input type="hidden" name="IT_is_rated" value=1></input>
+                <input type="hidden" name="rated" value="Importance"></input>
+                <button type="submit" name="IT_value" value="9">9</button>
+            </form>
+            <form action=/update_scores method="POST">
+                <input type="hidden" name="IT_is_rated" value=1></input>
+                <input type="hidden" name="rated" value="Importance"></input>
+                <button type="submit" name="IT_value" value="10">10</butto
+                    n></form>
+
+        </div>
+        <h3>Rate Urgency</h3>
+        <div class="btn-group">
+            <form action=/update_scores method="POST">
+                <input type="hidden" name="UT_is_rated" value=1></input>
+                <input type="hidden" name="rated" value="Urgency"></input>
+                <button type="submit" name="UT_value" value="0">0</button>
+            </form>
+            <form action=/update_scores method="POST">
+                <input type="hidden" name="UT_is_rated" value=1></input>
+                <input type="hidden" name="rated" value="Urgency"></input>
+                <button type="submit" name="UT_value" value="1">1</button>
+            </form>
+            <form action=/update_scores method="POST">
+                <input type="hidden" name="UT_is_rated" value=1></input>
+                <input type="hidden" name="rated" value="Urgency"></input>
+                <button type="submit" name="UT_value" value="2">2</button>
+            </form>
+            <form action=/update_scores method="POST">
+                <input type="hidden" name="UT_is_rated" value=1></input>
+                <input type="hidden" name="rated" value="Urgency"></input>
+                <button type="submit" name="UT_value" value="3">3</button>
+            </form>
+            <form action=/update_scores method="POST">
+                <input type="hidden" name="UT_is_rated" value=1></input>
+                <input type="hidden" name="rated" value="Urgency"></input>
+                <button type="submit" name="UT_value" value="4">4</button>
+            </form>
+            <form action=/update_scores method="POST">
+                <input type="hidden" name="UT_is_rated" value=1></input>
+                <input type="hidden" name="rated" value="Urgency"></input>
+                <button type="submit" name="UT_value" value="5">5</button>
+            </form>
+            <form action=/update_scores method="POST">
+                <input type="hidden" name="UT_is_rated" value=1></input>
+                <input type="hidden" name="rated" value="Urgency"></input>
+                <button type="submit" name="UT_value" value="6">6</button>
+            </form>
+            <form action=/update_scores method="POST">
+                <input type="hidden" name="UT_is_rated" value=1></input>
+                <input type="hidden" name="rated" value="Urgency"></input>
+                <button type="submit" name="UT_value" value="7">7</button>
+            </form>
+            <form action=/update_scores method="POST">
+                <input type="hidden" name="UT_is_rated" value=1></input>
+                <input type="hidden" name="rated" value="Urgency"></input>
+                <button type="submit" name="UT_value" value="8">8</button>
+            </form>
+            <form action=/update_scores method="POST">
+                <input type="hidden" name="UT_is_rated" value=1></input>
+                <input type="hidden" name="rated" value="Urgency"></input>
+                <button type="submit" name="UT_value" value="9">9</button>
+            </form>
+            <form action=/update_scores method="POST">
+                <input type="hidden" name="UT_is_rated" value=1></input>
+                <input type="hidden" name="rated" value="Urgency"></input>
+                <button type="submit" name="UT_value" value="10">10</button>
+            </form>
+        </div>
+        <h3>Rate Effort</h3>
+        <div class="btn-group">
+            <form action=/update_scores method="POST">
+                <input type="hidden" name="ET_is_rated" value=1></input>
+                <input type="hidden" name="rated" value="Effort"></input>
+                <button type="submit" name="ET_value" value="0">0</button>
+            </form>
+            <form action=/update_scores method="POST">
+                <input type="hidden" name="ET_is_rated" value=1></input>
+                <input type="hidden" name="rated" value="Effort"></input>
+                <button type="submit" name="ET_value" value="1">1</button>
+            </form>
+            <form action=/update_scores method="POST">
+                <input type="hidden" name="ET_is_rated" value=1></input>
+                <input type="hidden" name="rated" value="Effort"></input>
+                <button type="submit" name="ET_value" value="2">2</button>
+            </form>
+            <form action=/update_scores method="POST">
+                <input type="hidden" name="ET_is_rated" value=1></input>
+                <input type="hidden" name="rated" value="Effort"></input>
+                <button type="submit" name="ET_value" value="3">3</button>
+            </form>
+            <form action=/update_scores method="POST">
+                <input type="hidden" name="ET_is_rated" value=1></input>
+                <input type="hidden" name="rated" value="Effort"></input>
+                <button type="submit" name="ET_value" value="4">4</button>
+            </form>
+            <form action=/update_scores method="POST">
+                <input type="hidden" name="ET_is_rated" value=1></input>
+                <input type="hidden" name="rated" value="Effort"></input>
+                <button type="submit" name="ET_value" value="5">5</button>
+            </form>
+            <form action=/update_scores method="POST">
+                <input type="hidden" name="ET_is_rated" value=1></input>
+                <input type="hidden" name="rated" value="Effort"></input>
+                <button type="submit" name="ET_value" value="6">6</button>
+            </form>
+            <form action=/update_scores method="POST">
+                <input type="hidden" name="ET_is_rated" value=1></input>
+                <input type="hidden" name="rated" value="Effort"></input>
+                <button type="submit" name="ET_value" value="7">7</button>
+            </form>
+            <form action=/update_scores method="POST">
+                <input type="hidden" name="ET_is_rated" value=1></input>
+                <input type="hidden" name="rated" value="Effort"></input>
+                <button type="submit" name="ET_value" value="8">8</button>
+            </form>
+            <form action=/update_scores method="POST">
+                <input type="hidden" name="ET_is_rated" value=1></input>
+                <input type="hidden" name="rated" value="Effort"></input>
+                <button type="submit" name="ET_value" value="9">9</button>
+            </form>
+            <form action=/update_scores method="POST">
+                <input type="hidden" name="ET_is_rated" value=1></input>
+                <input type="hidden" name="rated" value="Effort"></input>
+                <button type="submit" name="ET_value" value="10">10</button>
+            </form>
+        </div>
+
+        <!-- Buttons Rating 0-10 END -->
+
+        <br><br>
+
+        <!-- tables START    --> 
+        <h3>Results Table</h3>
+        <table>
+            <tbody>
+                {%for RT in RT_list%}
+                <tr>
+                    <td>{{RT.task_id}}</td>
+                    <td>{{RT.name}}</td>
+                    <td>{{RT.Results_Score}}</td>
+                </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+
+        <br>
+
+        <div class="table-row">
+            <div class="table-column">
+                <h3>Importance Table</h3>
+                <table>
+                    <tbody>
+                        {%for IT in IT_list%}
+                        <tr>
+                            <td>{{IT.task_id}}</td>
+                            <td>{{IT.name}}</td>
+                            <td>{{IT.Importance_Score}}</td>
+                        </tr>
+                        {%endfor%}
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-column">
+                <h3>Urgency Table</h3>
+                <table>
+                    <tbody>
+                        {%for UT in UT_list%}
+                        <tr>
+                            <td>{{UT.task_id}}</td>
+                            <td>{{UT.name}}</td>
+                            <td>{{UT.Urgency_Score}}</td>
+                        </tr>
+                        {%endfor%}
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-column">
+                <h3>Effort Table</h3>
+                <table>
+                    <tbody>
+                        {%for ET in ET_list%}
+                        <tr>
+                            <td>{{ET.task_id}}</td>
+                            <td>{{ET.name}}</td>
+                            <td>{{ET.Effort_Score}}</td>
+                        </tr>
+                        {%endfor%}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- tables END    --> 
+
+
+    </div>
+</body>
+</html>
