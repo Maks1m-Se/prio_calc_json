@@ -1,3 +1,30 @@
 {
-    "tasks": []
+    "tasks": [
+        {
+            "id": 1,
+            "name": "Task A",
+            "done": false,
+            "importance": 0,
+            "urgency": 0,
+            "effort": 0,
+            "rated": {
+                "importance": false,
+                "urgency": false,
+                "effort": false
+            }
+        },
+        {
+            "id": 2,
+            "name": "K\u00fcche aufr\u00e4umen",
+            "done": false,
+            "importance": 0,
+            "urgency": 0,
+            "effort": 0,
+            "rated": {
+                "importance": false,
+                "urgency": false,
+                "effort": false
+            }
+        }
+    ]
 }

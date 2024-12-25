@@ -62,13 +62,15 @@
                     <td>
                         <form action="/update_task/{{todo.id}}" method="POST" style="display:inline;">
                             <!-- Debug: Display the generated action URL -->
-                            <button type="submit" class="update-link">Toggle Done</button>
+                            <button type="submit" class="update-link">Done</button>
                         </form>
                     </td>
                     <td>
                         <form action="/delete_task/{{todo.id}}" method="POST" style="display:inline;">
                             <!-- Debug: Display the generated action URL -->
-                            <button type="submit" class="delete-link">Delete</button>
+                            <button type="submit" class="delete-link" style="background-color: red; color: white;">
+                                <i class="fas fa-minus"></i>
+                            </button>
                         </form>
                     </td>
 

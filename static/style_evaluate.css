@@ -40,7 +40,16 @@ body {
   margin: 10px;
 }
 
+.btn-group {
+  display: flex;
+  gap: 5px; /* Space between buttons */
+}
+
 .btn-group button {
+    flex: 1; /* Each button takes equal space */
+    width: 2%;
+    padding: 1%; /* Add padding for better appearance */
+    box-sizing: border-box; /* Ensures padding doesn't increase size */
     background-color: #036873; /* Green background */
     color: white; /* White text */
     float: left; /* Float the buttons side by side */
@@ -49,6 +58,20 @@ body {
     border-radius: 0px;
     cursor: pointer;
     transition: background-color 0s, color 0s, border-color 0s;
+  }
+
+  @media (max-width: 768px) {
+    .btn-group button {
+        width: 1vw; /* Increase button size for smaller screens */
+        font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+      .btn-group button {
+          width: 0.8vw; /* Larger button width for very narrow screens */
+          font-size: 0.8rem;
+      }
   }
   
   /* Clear floats (clearfix hack) */
@@ -117,6 +140,18 @@ body {
   
   table th {
     background-color: #cacacadf;
+  }
+
+  @media (max-width: 768px) {
+    .table-row {
+        flex-direction: column; /* Stack tables vertically */
+        align-items: center; /* Center tables if needed */
+    }
+
+    .table-column {
+        width: 100%; /* Full width on smaller screens */
+        max-width: none; /* Remove max-width limit */
+    }
   }
   
   form {
