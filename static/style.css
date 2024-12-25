@@ -1,20 +1,32 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f5f8fa;
-  background: linear-gradient(10deg, #4f83d1,  #63D8F2);
+  background: linear-gradient(10deg, #4f83d1, #63D8F2);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; /* Changed from center */
   height: 100vh;
+  margin: 0;
+  padding-top: 5px;
 }
 
 .container {
   background-color: rgba(255, 255, 255, 0.25); /* Semi-transparent gray background */
-  width: 80%;
-  margin: auto;
-  padding: 20px;
   border-radius: 20px;
+  width: 90%; /* Ensure the container adapts to screen size */
+  max-width: 100%; /* Prevent it from exceeding the screen width */
+  margin: 20px auto;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  table th, table td {
+    font-size: 14px; /* Reduce font size for smaller screens */
+    padding: 5px;
+  }
 }
 
 .center {
@@ -34,14 +46,16 @@ h2 {
 }
 
 table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
+  width: 100%; /* Ensure the table stretches to fill the container */
+  table-layout: auto; /* Allow columns to resize based on content */
+  word-wrap: break-word; /* Break long words for better fit */
 }
 
 table th, table td {
-  padding: 10px;
-  border: 1px solid #ddd;
+  padding: 8px; /* Add padding for readability */
+  text-align: left;
+  white-space: normal; /* Allow text to wrap naturally */
+  overflow: hidden; /* Prevent content from overflowing cells */
 }
 
 table th {
@@ -71,7 +85,7 @@ label {
 }
 
 input[type="text"] {
-  width: 300px;
+  width: 70%;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -83,6 +97,40 @@ input[type="text"]:focus {
 }
 
 /* Update and Delete links */
+#button-done {
+  display: inline-block;
+  padding: 5px 10px;
+  color: #2e5ab8;
+  border: 1px solid #2e5ab8;
+  background-color: #2e5ab800;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+#button-done:hover {
+  background-color: #2e5ab8;
+  color: #fff;
+  border-color: #2e5ab8;
+}
+
+#button-delete {
+  display: inline-block;
+  padding: 5px 10px;
+  color: #792210;
+  border: 1px solid #792210;
+  background-color: #79221000;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+#button-delete:hover {
+  background-color: #B8452E;
+  color: #fff;
+  border-color: #B8452E;
+}
+
 a.update-link {
     display: inline-block;
     padding: 5px 10px;
@@ -114,3 +162,4 @@ a.delete-link:hover {
     color: #fff;
     border-color: #B8452E;
 }
+

@@ -3,7 +3,7 @@
         {
             "id": 1,
             "name": "Task A",
-            "done": false,
+            "done": true,
             "importance": 0,
             "urgency": 0,
             "effort": 0,
@@ -15,7 +15,111 @@
         },
         {
             "id": 2,
+            "name": "Task C",
+            "done": false,
+            "importance": 0,
+            "urgency": 0,
+            "effort": 0,
+            "rated": {
+                "importance": false,
+                "urgency": false,
+                "effort": false
+            }
+        },
+        {
+            "id": 3,
+            "name": "Task B",
+            "done": false,
+            "importance": 0,
+            "urgency": 0,
+            "effort": 0,
+            "rated": {
+                "importance": false,
+                "urgency": false,
+                "effort": false
+            }
+        },
+        {
+            "id": 4,
             "name": "K\u00fcche aufr\u00e4umen",
+            "done": false,
+            "importance": 0,
+            "urgency": 0,
+            "effort": 0,
+            "rated": {
+                "importance": false,
+                "urgency": false,
+                "effort": false
+            }
+        },
+        {
+            "id": 5,
+            "name": "K\u00fcche aufr\u00e4umen",
+            "done": false,
+            "importance": 0,
+            "urgency": 0,
+            "effort": 0,
+            "rated": {
+                "importance": false,
+                "urgency": false,
+                "effort": false
+            }
+        },
+        {
+            "id": 6,
+            "name": "Task C",
+            "done": false,
+            "importance": 0,
+            "urgency": 0,
+            "effort": 0,
+            "rated": {
+                "importance": false,
+                "urgency": false,
+                "effort": false
+            }
+        },
+        {
+            "id": 7,
+            "name": "K\u00fcche aufr\u00e4umen",
+            "done": false,
+            "importance": 0,
+            "urgency": 0,
+            "effort": 0,
+            "rated": {
+                "importance": false,
+                "urgency": false,
+                "effort": false
+            }
+        },
+        {
+            "id": 8,
+            "name": "Task A",
+            "done": false,
+            "importance": 0,
+            "urgency": 0,
+            "effort": 0,
+            "rated": {
+                "importance": false,
+                "urgency": false,
+                "effort": false
+            }
+        },
+        {
+            "id": 9,
+            "name": "Task B",
+            "done": false,
+            "importance": 0,
+            "urgency": 0,
+            "effort": 0,
+            "rated": {
+                "importance": false,
+                "urgency": false,
+                "effort": false
+            }
+        },
+        {
+            "id": 10,
+            "name": "Task C",
             "done": false,
             "importance": 0,
             "urgency": 0,

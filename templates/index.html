@@ -30,7 +30,7 @@
                 <label>Enter Task</label>
                 <input type="text" name="name" placeholder="Task">
                 <button type="submit">
-                    <i class="fas fa-plus"></i>
+                    +
                 </button>
             </div>
 
@@ -41,8 +41,11 @@
         <table>
             <thead>
                 <tr>
-                    <th>ID</th> <!-- Include the Label column header here -->
-                    <th>Tasks</th> 
+                    <th style="max-width: 10px;">ID</th> <!-- Include the Label column header here -->
+                    <th>Tasks</th>
+                    <th style="max-width: 10px;"></th>
+                    <th style="max-width: 10px;"></th> 
+                    <th style="max-width: 10px;"></th> 
                 </tr>
             </thead>
             <tbody>
@@ -62,14 +65,16 @@
                     <td>
                         <form action="/update_task/{{todo.id}}" method="POST" style="display:inline;">
                             <!-- Debug: Display the generated action URL -->
-                            <button type="submit" class="update-link">Done</button>
+                            <button name="button-done" id='button-done' type="submit" class="update-link">
+                                Done
+                            </button>
                         </form>
                     </td>
                     <td>
                         <form action="/delete_task/{{todo.id}}" method="POST" style="display:inline;">
                             <!-- Debug: Display the generated action URL -->
-                            <button type="submit" class="delete-link" style="background-color: red; color: white;">
-                                <i class="fas fa-minus"></i>
+                            <button name="button-delete" id='button-delete' type="submit" class="delete-link">
+                                -
                             </button>
                         </form>
                     </td>
